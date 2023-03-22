@@ -1,0 +1,89 @@
+<!DOCTYPE HTMl>
+<html lang="en">
+<head>
+	
+	<title> SoundBlaze </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="CSS/CSS_Quiz.css">
+	
+</head>
+
+<body>
+
+		
+		<button onclick="topBtn()" id="Btn1" title="Go to top">Top</button>
+		
+		
+		<div class="topnav">
+		
+		<div class="logo-image">
+			<img src="Images/logo.jpg" width="75px" height= "75px" >
+		</div>
+		<a href="">Home</a>
+		<a href="">Query</a>
+		<a href="">Products</a>
+		<a class="active" href="QUIZ.html">Quiz</a>
+		<a href="">Thumbnails</a>
+		<a href="">Modern Instruments</a>
+	
+		</div>
+
+
+		<h1>Quiz </h1><hr>
+		
+		
+		<p style="font-size: 22px"><b>Every right answer can score you 2 points and every wrong answer is going to score you -1. Think well and do all the questions. GOOD LUCK.</b></p>
+
+		
+		
+		
+
+		<div class="b">
+		<div id= "time" name="time" >
+		<p id="timer"> </p>
+		</div>
+		<div id="box">
+		<div id="quiz"></div>
+		<button id="submit">Submit Quiz</button>
+		<div id="results"></div>		
+		</div>
+		</div>
+		
+		
+		
+		<script src="JS/JavaScript_1.js"></script>
+		<script src="JS/JavaScript_2.js"></script>
+		
+  
+		<script>
+		var timer;
+					var min = 0; 
+					var sec = 60; 
+					var sec2;
+            
+					window.onload = function timecount(){
+						timer = setInterval(function(){ 
+							sec--;
+							if (min == 0 && sec == 0){
+								clearTimeout(timer);
+								document.getElementById("box").innerHTML = "Your session finished"
+							}
+							document.getElementById("timer").innerHTML =   "COUNTDOWN " + min + " : " + sec  ;  
+						},1000); 
+					}
+		</script>
+		
+		
+		<footer>
+			<div class="footerbar">
+			<a href="Student3_PageEditor.html">PAGE EDITOR</a>
+			<a href="">ABOUT US</a>
+			<a href="">CONTACT US</a>
+			<a href="STUDENT_DETAILS.html" >STUDENT DETAILS</a>
+			<a href="">Site Map</a>
+			</div>
+
+		</footer>
+		
+</body>
+</html>
